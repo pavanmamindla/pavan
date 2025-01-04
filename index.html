@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADRIDE - Advertisement App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ADRIDE</h1>
+            <p>Connecting Space Owners and Advertisers</p>
+        </header>
+
+        <div class="categories">
+            <button class="category-btn" onclick="showAds('wall')">Wall Ads</button>
+            <button class="category-btn" onclick="showAds('auto')">Auto Riksha Ads</button>
+            <button class="category-btn" onclick="showAds('helmet')">Bike Helmet Ads</button>
+        </div>
+
+        <div id="ads-list"></div>
+
+        <div class="register-section">
+            <h2>Register Your Ad Space</h2>
+            <form id="register-form">
+                <label for="ad-category">Select Category</label>
+                <select id="ad-category" name="category">
+                    <option value="wall">Wall Ads</option>
+                    <option value="auto">Auto Riksha Ads</option>
+                    <option value="helmet">Bike Helmet Ads</option>
+                </select>
+                <label for="ad-title">Ad Title</label>
+                <input type="text" id="ad-title" name="ad-title" required>
+                <label for="ad-description">Description</label>
+                <textarea id="ad-description" name="ad-description" required></textarea>
+                <label for="ad-price">Price</label>
+                <input type="number" id="ad-price" name="ad-price" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
